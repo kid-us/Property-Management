@@ -4,15 +4,9 @@
 /* ###################### Global styles  */
 
 :root {
-    /* --main-color: #1C1C1C;
-    --secondary-color: #262525;
-    --box-bg: #DAA425;
-    --btnBg: #dd9d07;
-    --borderBg: #110e49; */
     --body-color: #F3F3EC;
     --main-color: #fff;
     --third-color: #432E36;
-    /* --shadow: #DAA425; */
     --btnBg: #DC3545;
     --border: #110e49;
 }
@@ -229,7 +223,7 @@ nav a:hover {
 }
 
 /* Recent property listed */
-.property-detail :hover {
+.property-detail img:hover {
     border: 1px solid #DC3545;
     scale: 1.05;
     transition: 2s;
