@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <!-- website Icon -->
+    <link rel="website icon" href="../img/logo.png">
+    <title>Admin | Property</title>
+</head>
+
+<body>
+
+    <div class="row container-fluid">
+        <!-- Large device Sidebar -->
+        <div class="col-lg-2 col-md-2 col-12  px-4 sidebar fw-semibold d-none d-lg-block">
+            <p class="my-5">
+                <a href="admin/index.html">
+                    <img src="img/logo.png" alt="logo" class="img-fluid">
+                </a>
+            </p>
+
+            <p class="small text-center">
+                <span class="bi bi-person-fill fs-3"></span>
+                Jon Doe
+            </p>
+
+            <div class="pt-4 ms-4 small">
+                <p class="mb-4 pt-2">
+                    <a href="admin/index.html" class="text-light">
+                        <span class="text-danger fs-5 bi bi-speedometer2 me-1"></span>
+                        Dashboard</a>
+                </p>
+
+                <p class="mb-4 pt-2">
+                    <a href="admin/property.html" class="text-light"> <span
+                            class="text-danger fs-5 bi bi-building me-1"></span>
+                        Property</a>
+                </p>
+
+                <p class="mb-4 pt-2">
+                    <a href="admin/profile.html" class="text-light"> <span
+                            class="text-danger fs-5 bi bi-person-fill me-1"></span>
+                        Profile</a>
+                </p>
+
+                <p class="mb-4 pt-2">
+                    <a href="admin/manager.html" class="text-light">
+                        <span class="text-danger fs-5 bi bi-person-check me-1"></span>
+                        Managers
+                    </a>
+                </p>
+
+                <p class="mb-4 pt-2">
+                    <a href="admin/maintenance.html" class="text-light"> <span
+                            class="text-danger fs-5 bi bi-gear-wide me-1"></span>
+                        Maintenance Staff</a>
+                </p>
+
+
+                <p class="pt-2">
+                    <a href="admin/logout" class="text-light"> <span
+                            class="text-danger fs-5 bi bi-box-arrow-right me-1"></span>
+                        Logout
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Medium device sidebar -->
+        <div class="col-1 d-none d-md-block d-lg-none sidebar" style="width: 100px;">
+            <p class="my-5">
+                <a href="admin/index.html">
+                    <img src="img/logo.png" alt="logo" class="img-fluid">
+                </a>
+            </p>
+
+            <p class="bi bi-person-fill small text-center fw-semibold"> Jon Doe</p>
+
+            <div class="ms-4 pt-4">
+                <p class="mb-4 pt-2">
+                    <a href="admin/index.html" title="Dashboard"> <span
+                            class="text-danger fs-5 bi bi-speedometer2 me-1"></span>
+                    </a>
+                </p>
+                <p class="mb-4 pt-2">
+                    <a href="admin/property.html"> <span class="text-danger fs-5 bi bi-building me-1"></span>
+                    </a>
+                </p>
+                <p class="mb-4 pt-2">
+                    <a href="admin/profile.html" title="Profile"> <span
+                            class="text-danger fs-5 bi bi-person-fill me-1"></span>
+                    </a>
+                </p>
+
+                <p class="mb-4 pt-2">
+                    <a href="admin/manager.html" title="Managers"> <span
+                            class="text-danger fs-5 bi bi-person-check me-1"></span>
+                    </a>
+                </p>
+
+                <p class="mb-4 pt-2">
+                    <a href="admin/maintenance.html" title="Maintenance Staff"> <span
+                            class="text-danger fs-5 bi bi-gear-wide me-1"></span>
+                    </a>
+                </p>
+
+                <p class="pt-2">
+                    <a href="#" title="Logout"> <span class="text-danger fs-5 bi bi-box-arrow-right me-1"></span>
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Small device sidebar -->
+        <div class="d-block d-md-none pt-3 border-bottom">
+            <li class="mx-2 mb-2 ps-4 mt-1 text-light float-start">
+                <a href="admin/index.html">
+                    <img src="img/logo.png" alt="logo" width="100px">
+                </a>
+            </li>
+
+            <h1 class="mx-2 mb-2 float-end ">
+                <a id="sm-menu-bar" class="bi bi-list cursor"></a>
+            </h1>
+
+            <!-- overlay -->
+            <div id="sidebar-overlay" class="hidden"></div>
+
+            <!-- Small Device menus -->
+            <div id="small-sidebar"
+                class="sm-sidebar animate__animated animate__bounceInLeft shadow-lg py-3 ps-3 small hidden">
+                <button id="sidebar-close" class="close-btn text-end float-end fs-1">&times;</button>
+
+                <p class="mb-5 p-2">
+                    <a href="admin/index.html" class="text-light">
+                        <img src="img/logo.png" alt="" width="150px">
+                    </a>
+                </p>
+
+                <p class="fw-semibold text-center pb-5">
+                    <span class="bi bi-person-fill fs-5"></span>
+                    Jon Doe
+                </p>
+
+                <p class="mb-3 ms-4 pt-2">
+                    <a href="admin/index.html" class="text-light">
+                        <span class="text-danger fs-5 bi bi-speedometer2 me-1"></span>
+                        Dashboard</a>
+                </p>
+                <p class="mb-3 ms-4 pt-2">
+                    <a href="admin/property.html" class="text-light"> <span
+                            class="text-danger fs-5 bi bi-building me-1"></span>
+                        Property</a>
+                </p>
+                <p class="mb-3 ms-4 pt-2">
+                    <a href="admin/profile.html" class="text-light"> <span
+                            class="text-danger fs-5 bi bi-person-fill me-1"></span>
+                        Profile</a>
+                </p>
+
+                <p class="mb-3 ms-4 pt-2">
+                    <a href="admin/manager.html" class="text-light">
+                        <span class="text-danger fs-5 bi bi-person-check me-1"></span>
+                        Managers
+                    </a>
+                </p>
+
+                <p class="mb-3 ms-4 pt-2">
+                    <a href="admin/maintenance.html" class="text-light"> <span
+                            class="text-danger fs-5 bi bi-gear-wide me-1"></span>
+                        Maintenance Staff</a>
+                </p>
+
+                <p class="ms-4 pt-3">
+                    <a href="admin/logout" class="text-light"> <span
+                            class="text-danger fs-5 bi bi-box-arrow-right me-1"></span>
+                        Logout
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Main Contents -->
+        <div class="col-12 ms-2">
+            <div class="contents mt-5">
+                <p class="fs-5 fw-semibold border-start border-danger border-5 mb-4"> &nbsp; &nbsp; Property
+                </p>
+                <div class="row fw-semibold small">
+                    <p class="mt-5">Create new Property</p>
+                    <!-- Alert Message after property created -->
+
+                    <p class="alert alert-success text-center">Property Created Successfully</p>
+                    <p class="alert alert-danger text-center">Something went wrong Try again!</p>
+
+                    <!-- Create Form -->
+                    <div class="col-lg-8 col-md-8 col-12 mt-4 fw-semibold shadow-lg rounded bg2 p-5">
+                        <form action="#" method="#">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12 ">
+                                    <label for="image">Property Image</label>
+                                    <input required id="file" type="file" name="image" class="form-control my-3">
+                                    <label for="location">Property Location</label>
+                                    <input required id="location" type="text" name="location" class="form-control my-3">
+                                    <label for="price">Property Price Per Month</label>
+                                    <input required id="price" type="number" name="price" class="form-control my-3">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12 ">
+                                    <label for="type">Property Type</label>
+                                    <select required name="type" id="type" class="form-select my-3">
+                                        <option hidden selected></option>
+                                        <option value="Apartment">Apartment</option>
+                                        <option value="Building">Building</option>
+                                        <option value="Condominium">Condominium</option>
+                                        <option value="Villa">Villa</option>
+                                    </select>
+                                    <label for="description">Property Type</label>
+                                    <textarea required name="description" id="description" class="form-control my-3"
+                                        rows="5" style="resize: none;"></textarea>
+                                </div>
+                            </div>
+                            <button class="btns w-100">Create</button>
+                        </form>
+                    </div>
+
+                    <!-- Website Looking -->
+                    <div class="col-lg-4 col-md-4 col-12 mt-4 fw-semibold">
+                        <div class="shadow rounded bg2 p-5 ">
+                            <p class="pb-2">Website Looking</p>
+                            <img id="web-img" src="" alt="Website Looking" class="img-property rounded">
+                            <div class="row mt-5 fw-semibold ">
+                                <div class="col-12">
+                                    <p class="lh-1 bi bi-geo-alt-fill text-danger ">
+                                        <span id="location-p" class="text-secondary"></span>
+                                    </p>
+                                </div>
+                                <hr>
+                                <div class="col-4">
+                                    <p id="price-p" class=" bg-warning rounded text-center py-1 w-100"></p>
+                                </div>
+                                <div class="col-4 pt-1  text-secondary text-center">
+                                    <p id="type-p"></p>
+                                </div>
+                                <div class="col-4">
+                                    <p class="bg-danger text-light  rounded text-center w-100 py-1">Rent</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <p class="fw-semibold my-5">Make Changes on the Property</p>
+                <!-- Filter By -->
+                <div class="row fw-semibold small mb-4">
+                    <p class="mb-5">Filter BY</p>
+                    <div class="col-lg-2 col-4 my-2">
+                        <form action="#" method="#">
+                            <input type="text" name="all" value="all" hidden>
+                            <button class="btn btn-success w-100">All</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-2 col-4 my-2">
+                        <form action="#" method="#">
+                            <input type="text" name="apartment" value="apartment" hidden>
+                            <button class="btn btn-warning w-100">Apartment</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-2 col-4 my-2">
+                        <form action="#" method="#">
+                            <input type="text" name="building" value="building" hidden>
+                            <button class="btn btn-danger w-100">Building</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-2 col-4 my-2">
+                        <form action="#" method="#">
+                            <input type="text" name="condominium" value="condominium" hidden>
+                            <button class="btn btn-primary w-100">Condominium</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-2 col-4 my-2">
+                        <form action="#" method="#">
+                            <input type="text" name="villa" value="villa" hidden>
+                            <button class="btn btn-secondary w-100">Villa</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Alert Message after property Changed -->
+                <p class="alert alert-success text-center fw-semibold small">Property Updated Successfully</p>
+                <p class="alert alert-danger text-center fw-semibold small">Opps Property Removed Successfully</p>
+
+                <!-- Property Edit container -->
+                <div id="updateContainer" class="py-5 px-4 mb-5 rounded">
+                    <p class="text-light fw-semibold">All Property</p>
+                    <!-- Property 1 -->
+                    <div class="row justify-content-center bg2 rounded mb-5 py-5">
+                        <!-- Fetch the data from the database and display it here -->
+                        <div class="col-lg-5 col-12 border-end border-danger border-5">
+                            <div class="shadow-lg bg2 rounded p-4">
+                                <img src="img/Property/villa1.jpg" alt="Apartment" class="img-property rounded">
+                                <div class="row mt-5 fw-semibold small">
+                                    <div class="col-12">
+                                        <p class="lh-1 small text-secondary">
+                                            <span class="bi bi-geo-alt-fill text-danger"></span>
+                                            Gondar, Amhara, Ethiopia
+                                        </p>
+                                    </div>
+                                    <hr>
+                                    <div class="col-6">
+                                        <p class="small bg-warning rounded text-center py-2">8000 ETB</p>
+                                    </div>
+                                    <div class="col-6 pt-2 small text-secondary text-center">
+                                        <p>Apartment</p>
+                                    </div>
+                                    <div class="col-12 small">
+                                        <p>Description</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis deserunt,
+                                            eos temporibus voluptas maiores provident consequatur quibusdam obcaecati in
+                                            voluptatibus ipsa praesentium labore. Incidunt nostrum illum amet eius ipsum
+                                            animi!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-lg-7 col-12">
+                            <p class="text-danger fw-semibold small mb-5">Make change on this Property</p>
+                            <form action="#" method="#">
+                                <input type="text" name="property_number" value="3232" hidden>
+                                <fieldset class="fieldset1" disabled>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-12  fw-semibold small">
+                                            <label for="property">Property</label>
+                                            <input type="text" name="property" class="form-control my-4 fw-semibold"
+                                                value="Apartment">
+
+                                            <label for="image">Image</label>
+                                            <input type="file" name="image" class="form-control my-4">
+
+                                            <label for="price">Price per Month</label>
+                                            <input type="number" min="1" name="price"
+                                                class="form-control my-4 fw-semibold" value="8000">
+                                        </div>
+                                        <div class="col-lg-6 col-12  fw-semibold small">
+
+                                            <label for="location">Location</label>
+                                            <input type="text" min="1" name="location"
+                                                class="form-control my-4 fw-semibold" value="Addis Abeba">
+
+                                            <label for="description">Description</label>
+                                            <textarea name="description" class="form-control my-4 fw-semibold"
+                                                style="resize: none;" rows="6"
+                                                placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus animi ea nisi voluptatum doloribus nihil ad perferendis aspernatur qui quos aliquid eius facilis corrupti dolores, sit suscipit voluptas velit dolorum."></textarea>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <div class="mt-3">
+                                    <a class="edit-btn btn bi bi-pencil bg-warning  fw-semibold small px-4"
+                                        data-num="1">
+                                        Edit</a>
+
+                                    <button name="delete"
+                                        class="delete-property delete-btn1 btn bi bi-trash bg-danger  fw-semibold small"
+                                        data-num="1"> Delete</button>
+
+                                    <button name="update"
+                                        class="update-btn1 btn bi bi-arrow-return-right bg-success  small fw-semibold hidden">
+                                        Update</button>
+
+                                    <a class="discard discard-btn1 btn bi bi-x bg-info  fw-semibold small px-4 hidden"
+                                        data-num="1"> Discard</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <hr class="text-light my-5">
+
+                    <!-- Property 2 -->
+                    <div class="row justify-content-center bg2 rounded mb-5 py-5">
+                        <!-- Fetch the data from the database and display it here -->
+                        <div class="col-lg-5 col-12 border-end border-danger border-5">
+                            <div class="shadow-lg bg2 rounded p-4">
+                                <img src="img/Property/villa1.jpg" alt="Apartment" class="img-property rounded">
+                                <div class="row mt-5 fw-semibold small">
+                                    <div class="col-12">
+                                        <p class="lh-1 small text-secondary">
+                                            <span class="bi bi-geo-alt-fill text-danger"></span>
+                                            Gondar, Amhara, Ethiopia
+                                        </p>
+                                    </div>
+                                    <hr>
+                                    <div class="col-6">
+                                        <p class="small bg-warning rounded text-center py-2">8000 ETB</p>
+                                    </div>
+                                    <div class="col-6 pt-2 small text-secondary text-center">
+                                        <p>Apartment</p>
+                                    </div>
+                                    <div class="col-12 small">
+                                        <p>Description</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis deserunt,
+                                            eos temporibus voluptas maiores provident consequatur quibusdam obcaecati in
+                                            voluptatibus ipsa praesentium labore. Incidunt nostrum illum amet eius ipsum
+                                            animi!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-lg-7 col-12">
+                            <p class="text-danger fw-semibold small mb-5">Make change on this Property</p>
+                            <form action="#" method="#">
+                                <input type="text" name="property_number" value="3232" hidden>
+                                <fieldset class="fieldset2" disabled>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-12  fw-semibold small">
+                                            <label for="property">Property</label>
+                                            <input type="text" name="property" class="form-control my-4 fw-semibold"
+                                                value="Apartment">
+
+                                            <label for="image">Image</label>
+                                            <input type="file" name="image" class="form-control my-4">
+
+                                            <label for="price">Price per Month</label>
+                                            <input type="number" min="1" name="price"
+                                                class="form-control my-4 fw-semibold" value="8000">
+                                        </div>
+                                        <div class="col-lg-6 col-12  fw-semibold small">
+
+                                            <label for="location">Location</label>
+                                            <input type="text" min="1" name="location"
+                                                class="form-control my-4 fw-semibold" value="Addis Abeba">
+
+                                            <label for="description">Description</label>
+                                            <textarea name="description" class="form-control my-4 fw-semibold"
+                                                style="resize: none;" rows="6"
+                                                placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus animi ea nisi voluptatum doloribus nihil ad perferendis aspernatur qui quos aliquid eius facilis corrupti dolores, sit suscipit voluptas velit dolorum."></textarea>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <div class="mt-3">
+                                    <a class="edit-btn btn bi bi-pencil bg-warning  fw-semibold small px-4"
+                                        data-num="2">
+                                        Edit</a>
+
+                                    <button name="delete"
+                                        class="delete-property delete-btn1 btn bi bi-trash bg-danger  fw-semibold small"
+                                        data-num="2"> Delete</button>
+
+                                    <button name="update"
+                                        class="update-btn2 btn bi bi-arrow-return-right bg-success  small fw-semibold hidden">
+                                        Update</button>
+
+                                    <a class="discard discard-btn2 btn bi bi-x bg-info  fw-semibold small px-4 hidden"
+                                        data-num="2"> Discard</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/admin.js"></script>
+
+</body>
+
+</html>

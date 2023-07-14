@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- Animate css -->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- website Icon -->
+    <link rel="website icon" href="Img/logo.png">
+    <title>Contact Us</title>
+</head>
+
+<body class="bg1">
+
+    <!-- Navbar -->
+    <nav class="px-5 px-lg-0 border-bottom">
+        <!-- Large Device navbar -->
+        <div class="container d-none d-md-block">
+            <div class="float-start pt-3">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.png" alt="logo" width="100px">
+                </a>
+            </div>
+
+            <div class="float-end small fw-semibold pt-4">
+                <a href="index.html" class="mx-5">Home</a>
+                <a id="category-link" class="cursor me-5">Properties &nbsp;
+                    <span id="caret" class="bi bi-caret-down-fill"></span> </a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html" class="mx-5">About</a>
+
+                <!-- Before Login -->
+                <!-- <a href="login.html" class="px-4 btns">Register/Login</a> -->
+
+                <!-- After login -->
+                <a href="dashboard.html" class="bi bi-person-fill"> Jon Doe </a>
+            </div>
+
+            <!-- Category  dropdown  -->
+            <div id="category-container" class="fw-semibold small shadow-lg py-4 px-5 rounded hidden">
+
+                <p><a href="apartments.html">Apartments</a></p>
+                <p><a href="building.html">Buildings</a></p>
+                <p><a href="condominium.html">Condominium</a></p>
+                <p><a href="villa.html">Villas</a></p>
+            </div>
+        </div>
+
+        <!-- Small device navbar -->
+        <div class="d-block d-md-none">
+            <div class="float-start pt-3">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.png" alt="logo" width="80px">
+                </a>
+            </div>
+
+            <div class="float-end pt-3 small fw-semibold">
+                <p id="sm-menu-btn" class="cursor bi bi-list fs-5"></p>
+            </div>
+
+            <!-- small device menu modal -->
+            <div class="sm-navbar">
+                <div id="menu-page" class="menu animate__animated animate__bounceInLeft hidden">
+                    <span id="close-menu" class="nav-item text-danger fs-1 float-end cursor me-5 p-4">&times;</span>
+
+                    <ul class="px-5 fw-semibold">
+                        <a href="index.html">
+                            <img src="img/logo.png" alt="logo" width="120px" class="py-4">
+                        </a>
+                        <!-- After Login -->
+                        <li><a href="dashboard.html" class="nav-link bi bi-person-fill pt-5"> Jon Doe</a></li>
+
+                        <!-- Before Login -->
+                        <!-- <li class="nav-item pt-5">
+                            <a href="login.html" class="nav-link bi bi-pen-fill"> Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="login.html" class="nav-link bi bi-box-arrow-in-right"> Login</a>
+                        </li> -->
+
+
+                        <li>
+                            <a id="sm-category-link" class="nav-link bi bi-three-dots cursor"> Properties
+                                <span id="sm-caret" class="bi bi-caret-down-fill ms-2"></span>
+                            </a>
+
+                            <!-- Small device category dropdown -->
+                            <ul id="menus-dropdown" class="hidden">
+                                <li><a href="apartments.html">Apartments</a></li>
+                                <li><a href="building.html">Buildings</a></li>
+                                <li><a href="condominium.html">Condominium</a></li>
+                                <li><a href="villa.html">Villa</a></li>
+                                <!-- <li><a href="maintenance.html">Maintenance</a></li> -->
+                                <!-- <li><a href="settings.html">Settings</a></li> -->
+                            </ul>
+                        </li>
+
+                        <li><a href="index.html" class="nav-link bi bi-person-lines-fill"> Home</a></li>
+                        <li><a href="contact.html" class="nav-link bi bi-person-lines-fill"> Contact</a></li>
+                        <li><a href="about.html" class="nav-link bi bi-question"> About</a></li>
+
+                        <p class="text-center text-light mt-5">LOREM</p>
+                        <p class="text-light small text-center mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit.
+                            Et, numquam labore
+                            eaque quasi.</p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5 py-5">
+        <div class="row justify-content-center pt-5">
+            <!-- Contact Info -->
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="p-lg-5 my-5">
+                    <p class="display-6 fw-semibold">Let's talk about everything.</p>
+                    <div class="my-5 text-center fw-semibold">
+                        <p class="fs-3 fw-semibold ">Adiss Abeba</p>
+                        <p class="fs-3 fw-semibold mt-5">Phone</p>
+                        <p>
+                            <span class="bi bi-phone-fill"> +251912345678</span>
+                        </p>
+                        <p class="fs-3 fw-semibold mt-5">Email</p>
+                        <p>
+                            <span class="bi bi-envelope-fill"> rentit@gmail.com</span>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-6 col-md-6 col-12 px-5 shadow-lg px-5 rounded py-5 bg">
+                <p class="display-6 fw-semibold text-center">Fill the form it's easy.</p>
+                <!-- Success message  -->
+                <p class="alert alert-success text-center fw-semibold">Thank you! We will get in touch</p>
+
+                <form action="#" method="#">
+                    <div class="row mt-5">
+                        <div class="col-6 small fw-semibold">
+                            <label for="first-name">First Name</label>
+                            <input type="text" name="fname" id="fname" class="form-control my-3">
+                        </div>
+                        <div class="col-6 small fw-semibold">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" name="lname" id="lname" class="form-control my-3">
+                        </div>
+                        <div class="col-12 small fw-semibold">
+                            <label for="emial">Email</label>
+                            <input type="email" name="email" id="email" class="form-control my-3">
+                        </div>
+                        <div class="col-12 small fw-semibold">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" cols="20" rows="8" class="form-control my-3"
+                                style="resize: none;"></textarea>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <button class="btn btn-danger px-5 small">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-lg-4 col-md-6 col-12 my-3 small fw-semibold">
+                    <img src="img/logo.png" alt="" width="200px">
+                    <p class="lh-1 mt-4">Do you Need Help with Anything?</p>
+                    <p class="lh-1 text-secondary">Receive updates</p>
+                    <form action="#" method="#" class="small fw-semibold">
+                        <input type="email" name="email" class="form-control mt-4" placeholder="Email Address">
+                        <button class="btns mt-4 px-5 mb-4">Subscribe</button>
+                    </form>
+                </div>
+
+                <div class="offset-lg-2 col-lg-3 col-6 my-5">
+                    <p class="mb-4 fw-semibold">PROPERTIES</p>
+                    <p><a class="fw-semibold" href="apartments.html">Apartments</a></p>
+                    <p><a class="fw-semibold" href="condominium.html">Condominium</a></p>
+                    <p><a class="fw-semibold" href="building.html">Buildings</a></p>
+                    <p><a class="fw-semibold" href="villa.html">Villa</a></p>
+                </div>
+
+                <div class="col-lg-3 col-6 my-5">
+                    <p class="mb-4 fw-semibold">SUPPORT</p>
+                    <p><a class="fw-semibold" href="about.html">About</a></p>
+                    <p><a class="fw-semibold" href="contact.html">Contact</a></p>
+                    <p><a class="fw-semibold" href="#">Privacy</a></p>
+                    <p><a class="fw-semibold" href="#">Terms</a></p>
+                </div>
+
+                <hr>
+                <p class="small fw-semibold text-center pb-2">Copyright © 2023 Rent It All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

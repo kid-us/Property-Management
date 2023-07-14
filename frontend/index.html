@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- Animate css -->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- website Icon -->
+    <link rel="website icon" href="Img/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Rent It</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="px-5 px-lg-0 border-bottom">
+        <!-- Large Device navbar -->
+        <div class="container d-none d-md-block">
+            <div class="float-start pt-3">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.png" alt="logo" width="100px">
+                </a>
+            </div>
+
+            <div class="float-end small fw-semibold pt-4">
+                <a id="category-link" class="cursor me-5">Properties &nbsp;
+                    <span id="caret" class="bi bi-caret-down-fill"></span> </a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html" class="mx-5">About</a>
+
+                <!-- Before Login -->
+                <!-- <a href="login.html" class="px-4 btns">Register/Login</a> -->
+
+                <!-- After login -->
+                <a href="dashboard.html" class="bi bi-person-fill"> Jon Doe </a>
+            </div>
+
+            <!-- Category  dropdown  -->
+            <div id="category-container" class="fw-semibold small shadow-lg py-4 px-5 rounded hidden">
+
+                <p><a href="apartments.html">Apartments</a></p>
+                <p><a href="building.html">Buildings</a></p>
+                <p><a href="condominium.html">Condominium</a></p>
+                <p><a href="villa.html">Villas</a></p>
+            </div>
+        </div>
+
+        <!-- Small device navbar -->
+        <div class="d-block d-md-none">
+            <div class="float-start pt-3">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.png" alt="logo" width="80px">
+                </a>
+            </div>
+
+            <div class="float-end pt-3 small fw-semibold">
+                <p id="sm-menu-btn" class="cursor bi bi-list fs-5"></p>
+            </div>
+
+            <!-- small device menu modal -->
+            <div class="sm-navbar">
+                <div id="menu-page" class="menu animate__animated animate__bounceInLeft hidden">
+                    <span id="close-menu" class="nav-item text-danger fs-1 float-end cursor me-5 p-4">&times;</span>
+
+                    <ul class="px-5 fw-semibold">
+                        <a href="index.html">
+                            <img src="img/logo.png" alt="logo" width="120px" class="py-4">
+                        </a>
+                        <!-- After Login -->
+                        <li><a href="dashboard.html" class="nav-link bi bi-person-fill pt-5"> Jon Doe</a></li>
+
+                        <!-- Before Login -->
+                        <!-- <li class="nav-item pt-5">
+                            <a href="login.html" class="nav-link bi bi-pen-fill"> Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="login.html" class="nav-link bi bi-box-arrow-in-right"> Login</a>
+                        </li> -->
+
+
+                        <li>
+                            <a id="sm-category-link" class="nav-link bi bi-three-dots cursor"> Properties
+                                <span id="sm-caret" class="bi bi-caret-down-fill ms-2"></span>
+                            </a>
+
+                            <!-- Small device category dropdown -->
+                            <ul id="menus-dropdown" class="hidden">
+                                <li><a href="apartments.html">Apartments</a></li>
+                                <li><a href="building.html">Buildings</a></li>
+                                <li><a href="condominium.html">Condominium</a></li>
+                                <li><a href="villa.html">Villa</a></li>
+                                <!-- <li><a href="maintenance.html">Maintenance</a></li> -->
+                                <!-- <li><a href="settings.html">Settings</a></li> -->
+                            </ul>
+                        </li>
+
+                        <li><a href="contact.html" class="nav-link bi bi-person-lines-fill"> Contact</a></li>
+                        <li><a href="about.html" class="nav-link bi bi-question"> About</a></li>
+
+                        <p class="text-center text-light mt-5">LOREM</p>
+                        <p class="text-light small text-center mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit.
+                            Et, numquam labore
+                            eaque quasi.</p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero-infos">
+            <div class="fw-semibold p-lg-5">
+                <p class="fs-2 text-center" style="text-shadow: 2px 2px #000;">Search Your Next Home,
+                    Office</p>
+                <p class="small text-center">WE ARE PROVIDING THE BEST REAL ESATE DEALS
+                </p>
+
+                <form action="/result.html" method="#" class="find-form rounded text-dark rounded mt-5">
+                    <!-- Error message when search is not found -->
+
+                    <p class="p-4 text-center text-danger fs-6 fw-semibold alert alert-danger">Oppps! No Properties are
+                        available on this
+                        input, Try
+                        again with another input </p>
+
+                    <div class="row p-lg-4 p-5">
+                        <div class="col-lg-3 col-md-6 col-12 small">
+                            <label for="city">City</label>
+                            <select name="city" id="city" class="form-select my-3 border border-dark" required>
+                                <option value="" hidden selected></option>
+                                <option value="Addis Abeba">Addis Abeba</option>
+                                <option value="Gondar">Gondar</option>
+                                <option value="Mekele">Mekele</option>
+                                <option value="Semera">Semera</option>
+                                <option value="Bahrdar">Bahrdar</option>
+                                <option value="Hawasa">Hawasa</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12 small">
+                            <label for="property">Property Type</label>
+                            <select name="property" id="property" class="form-select my-3 border border-dark" required>
+                                <option value="" hidden selected></option>
+                                <option value="Apartment">Apartment</option>
+                                <option value="Building">Building</option>
+                                <option value="Villa">Villa</option>
+                                <option value="Condominium">Condominium</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12 small">
+                            <label for="range">Price Range</label>
+                            <input type="number" name="range" class="form-control my-3 border border-dark" required>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <label for=""></label><br>
+                            <button class="btns mt-2 py-2 w-100">Find Property</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Property types -->
+    <section class="bg1 py-5">
+        <div class="container">
+            <p class="fs-3 text-center fw-semibold my-5 pt-5">Featured Property Types</p>
+            <p class="small text-center text-secondary p-0 m-0">FIND ALL TYPE OF PROPERTY.</p>
+            <div class="row justify-content-center mt-5 pb-5">
+                <!-- Apartments -->
+                <div class="col-lg-3 col-md-6 col-12 my-3">
+                    <a href="apartments.html">
+                        <div class="bg shadow-lg rounded p-3 text-center fw-semibold">
+                            <img class="section-img pt-4" src="img/apartment.png" alt="Apartment">
+                            </img>
+                            <p class="mt-4">Apartment</p>
+                            <p class="small text-secondary">100 Property</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Buildings -->
+                <div class="col-lg-3 col-md-6 col-12 my-3">
+                    <a href="building.html">
+                        <div class="bg shadow-lg rounded p-3 text-center fw-semibold">
+                            <img class="section-img pt-4" src="img/building.png" alt="Building">
+                            </img>
+                            <p class="mt-4">Buildings</p>
+                            <p class="small text-secondary">100 Property</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Villas -->
+                <div class="col-lg-3 col-md-6 col-12 my-3">
+                    <a href="villa.html">
+                        <div class="bg shadow-lg rounded p-3 text-center fw-semibold">
+                            <img class="section-img pt-4" src="img/villa.png" alt="Villas">
+                            </img>
+                            <p class="mt-4">Villa</p>
+                            <p class="small text-secondary">100 Property</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Condominiums -->
+                <div class="col-lg-3 col-md-6 col-12 my-3">
+                    <a href="condominium.html">
+                        <div class="bg shadow-lg rounded p-3 text-center fw-semibold">
+                            <img class="section-img pt-4" src="img/condominium.png" alt="Condominium">
+                            </img>
+                            <p class="mt-4">Condominium</p>
+                            <p class="small text-secondary">100 Property</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Property listed -->
+    <section class="container my-5">
+        <p class="fs-3 text-center mb-4 fw-semibold pt-5">Recent Property listed</p>
+        <p class="text-center fw-semibold text-secondary lh-1">VIEW A LIST OF
+            FEATURED PROPERTIES AND RENT IT!</p>
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-4 col-12 my-3">
+                <div class="shadow-lg rounded p-4">
+                    <a class="property-detail cursor">
+                        <img src="img/Property/apartment1.jpg" alt="Apartment" class="img-property rounded"
+                            data-img="img/Property/apartment1.jpg" data-property="Apartment" data-price="8000"
+                            data-location="Addis Abeba"
+                            data-description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat possimus voluptatibus nostrum officiis atque a, soluta accusantium nisi tempora voluptates nulla aperiam aut vitae ducimus sit repellendus sunt? Quam, quisquam.">
+                    </a>
+                    <div class="row mt-5 fw-semibold ">
+                        <div class="col-12">
+                            <p class="lh-1 small text-secondary">
+                                <span class="bi bi-geo-alt-fill text-danger"></span>
+                                Adiss Abeba, Ethiopia
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="col-4">
+                            <p class="small bg-warning rounded text-center py-2">8000 ETB</p>
+                        </div>
+                        <div class="col-4 pt-2 small text-secondary text-center">
+                            <p>Apartment</p>
+                        </div>
+                        <div class="col-4">
+                            <form action="/proceed.html" method="#">
+                                <input type="number" name="rent_price" hidden value="8000">
+                                <input type="text" name="location" hidden value="Semera Ethiopia">
+                                <input type="text" name="property_type" hidden value="Apartment">
+                                <input type="text" name="description" hidden
+                                    value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum totam ea cumque asperiores similique ipsam deleniti, architecto dicta necessitatibus itaque.">
+                                <input type="text" name="image" hidden value="/img/Property/apartment2.jpg">
+                                <button class="btns w-100 py-2">Rent</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-12 my-3">
+                <div class="shadow-lg rounded p-4">
+                    <a class="property-detail cursor">
+                        <img src="img/Property/villa1.jpg" alt="Villa" class="img-property rounded"
+                            data-img="img/Property/villa1.jpg" data-property="Apartment" data-price="8000"
+                            data-location="Addis Abeba"
+                            data-description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat possimus voluptatibus nostrum officiis atque a, soluta accusantium nisi tempora voluptates nulla aperiam aut vitae ducimus sit repellendus sunt? Quam, quisquam.">
+                    </a>
+                    <div class="row mt-5 fw-semibold ">
+                        <div class="col-12">
+                            <p class="lh-1 small text-secondary">
+                                <span class="bi bi-geo-alt-fill text-danger"></span>
+                                Gondar, Amhara, Ethiopia
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="col-4">
+                            <p class="small bg-warning rounded text-center py-2">8000 ETB</p>
+                        </div>
+                        <div class="col-4 pt-2 small text-secondary text-center">
+                            <p>Homes & Villa</p>
+                        </div>
+                        <div class="col-4">
+                            <form action="/proceed.html" method="#">
+                                <input type="number" name="rent_price" hidden value="8000">
+                                <input type="text" name="location" hidden value="Semera Ethiopia">
+                                <input type="text" name="property_type" hidden value="Apartment">
+                                <input type="text" name="description" hidden
+                                    value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum totam ea cumque asperiores similique ipsam deleniti, architecto dicta necessitatibus itaque.">
+                                <input type="text" name="image" hidden value="/img/Property/apartment2.jpg">
+                                <button class="btns w-100 py-2">Rent</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-12 my-3">
+                <div class="shadow-lg rounded p-4">
+                    <a class="property-detail cursor">
+                        <img src="img/Property/buliding1.jpg" alt="Building" class="img-property rounded"
+                            data-img="img/Property/buliding1.jpg" data-property="Apartment" data-price="8000"
+                            data-location="Addis Abeba"
+                            data-description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat possimus voluptatibus nostrum officiis atque a, soluta accusantium nisi tempora voluptates nulla aperiam aut vitae ducimus sit repellendus sunt? Quam, quisquam.">
+                    </a>
+                    <div class="row mt-5 fw-semibold ">
+                        <div class="col-12">
+                            <p class="lh-1 small text-secondary">
+                                <span class="bi bi-geo-alt-fill text-danger"></span>
+                                Hawasa, Sidama, Ethiopia
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="col-4">
+                            <p class="small bg-warning rounded text-center py-2">18000 ETB</p>
+                        </div>
+                        <div class="col-4 pt-2 small text-secondary">
+                            <p>Commercial</p>
+                        </div>
+                        <div class="col-4">
+                            <form action="/proceed.html" method="#">
+                                <input type="number" name="rent_price" hidden value="18000">
+                                <input type="text" name="location" hidden value="Semera Ethiopia">
+                                <input type="text" name="property_type" hidden value="Apartment">
+                                <input type="text" name="description" hidden
+                                    value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum totam ea cumque asperiores similique ipsam deleniti, architecto dicta necessitatibus itaque.">
+                                <input type="text" name="image" hidden value="/img/Property/apartment2.jpg">
+                                <button class="btns w-100 py-2">Rent</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-12 my-3">
+                <div class="shadow-lg rounded p-4">
+                    <a class="property-detail cursor">
+                        <img src="img/Property/condo1.jpg" alt="Apartment" class="img-property rounded"
+                            data-img="img/Property/condo1.jpg" data-property="Apartment" data-price="8000"
+                            data-location="Addis Abeba"
+                            data-description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat possimus voluptatibus nostrum officiis atque a, soluta accusantium nisi tempora voluptates nulla aperiam aut vitae ducimus sit repellendus sunt? Quam, quisquam.">
+                    </a>
+                    <div class="row mt-5 fw-semibold ">
+                        <div class="col-12">
+                            <p class="lh-1 small text-secondary">
+                                <span class="bi bi-geo-alt-fill text-danger"></span>
+                                Mekele, Tigray, Ethiopia
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="col-4">
+                            <p class="small bg-warning rounded text-center py-2">8000 ETB</p>
+                        </div>
+                        <div class="col-4 pt-2 small text-secondary text-center">
+                            <p>Condominium</p>
+                        </div>
+                        <div class="col-4">
+                            <form action="/proceed.html" method="#">
+                                <input type="number" name="rent_price" hidden value="8000">
+                                <input type="text" name="location" hidden value="Semera Ethiopia">
+                                <input type="text" name="property_type" hidden value="Apartment">
+                                <input type="text" name="description" hidden
+                                    value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum totam ea cumque asperiores similique ipsam deleniti, architecto dicta necessitatibus itaque.">
+                                <input type="text" name="image" hidden value="/img/Property/apartment2.jpg">
+                                <button class="btns w-100 py-2">Rent</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-12 my-3">
+                <div class="shadow-lg rounded p-4">
+                    <a class="property-detail cursor">
+                        <img src="img/Property/bulding2.jpg" alt="Villa" class="img-property rounded"
+                            data-img="/img/Property/bulding2.jpg" data-property="Apartment" data-price="8000"
+                            data-location="Addis Abeba"
+                            data-description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat possimus voluptatibus nostrum officiis atque a, soluta accusantium nisi tempora voluptates nulla aperiam aut vitae ducimus sit repellendus sunt? Quam, quisquam.">
+                    </a>
+                    <div class="row mt-5 fw-semibold ">
+                        <div class="col-12">
+                            <p class="lh-1 small text-secondary">
+                                <span class="bi bi-geo-alt-fill text-danger"></span>
+                                Bahrdar, Amhara, Ethiopia
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="col-4">
+                            <p class="small bg-warning rounded text-center py-2">10000 ETB</p>
+                        </div>
+                        <div class="col-4 pt-2 small text-secondary text-center">
+                            <p>Commercial</p>
+                        </div>
+                        <div class="col-4">
+                            <form action="/proceed.html" method="#">
+                                <input type="number" name="rent_price" hidden value="10000">
+                                <input type="text" name="location" hidden value="Semera Ethiopia">
+                                <input type="text" name="property_type" hidden value="Apartment">
+                                <input type="text" name="description" hidden
+                                    value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum totam ea cumque asperiores similique ipsam deleniti, architecto dicta necessitatibus itaque.">
+                                <input type="text" name="image" hidden value="/img/Property/apartment2.jpg">
+                                <button class="btns w-100 py-2">Rent</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-12 my-3">
+                <div class="shadow-lg rounded p-4">
+                    <a class="property-detail cursor">
+                        <img src="img/Property/apartment2.jpg" alt="Apartment" class="img-property rounded"
+                            data-img="/img/Property/apartment2.jpg" data-property="Apartment" data-price="8000"
+                            data-location="Addis Abeba"
+                            data-description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat possimus voluptatibus nostrum officiis atque a, soluta accusantium nisi tempora voluptates nulla aperiam aut vitae ducimus sit repellendus sunt? Quam, quisquam.">
+                    </a>
+                    <div class="row mt-5 fw-semibold ">
+                        <div class="col-12">
+                            <p class="lh-1 small text-secondary">
+                                <span class="bi bi-geo-alt-fill text-danger"></span>
+                                Semera, Afar, Ethiopia
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="col-4">
+                            <p class="small bg-warning rounded text-center py-2">180000 ETB</p>
+                        </div>
+                        <div class="col-4 small text-secondary pt-2 text-center">
+                            <p>Apartment</p>
+                        </div>
+                        <div class="col-4">
+                            <form action="/proceed.html" method="#">
+                                <input type="number" name="rent_price" hidden value="18000">
+                                <input type="text" name="location" hidden value="Semera Ethiopia">
+                                <input type="text" name="property_type" hidden value="Apartment">
+                                <input type="text" name="description" hidden
+                                    value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum totam ea cumque asperiores similique ipsam deleniti, architecto dicta necessitatibus itaque.">
+                                <input type="text" name="image" hidden value="/img/Property/apartment2.jpg">
+                                <button class="btns w-100 py-2">Rent</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <!-- overlay -->
+    <div id="overlay" class="hidden"></div>
+
+    <!-- Information about the Property Modal -->
+    <div id="property-modal" class="p-5 rounded shadow-lg hidden">
+        <p id="close-modal" class="text-end text-danger fw-semibold fs-5 cursor">x</p>
+    </div>
+
+    <!-- Awards -->
+    <section class="bg3 my-5">
+        <div class="container">
+            <p class="text-center small text-danger lh-1 fw-semibold pt-5">Our Awards</p>
+            <p class="fs-3 text-light text-center lh-1 fw-semibold mb-5">Over 20,000+ Happy Users or Renters Being
+                with Us
+                Still They
+                Love
+                Our Service </p>
+            <div class="row justify-content-center p-4">
+                <div class="col-lg-4 col-md-4 col-12 my-4 text-center">
+                    <p class="pb-4">
+                        <span class="sphere-bg p-4 bi bi-trophy-fill fs-2"></span>
+                    </p>
+                    <h5 class="text-light mt-4">3X</h5>
+                    <p class="text-light fw-semibold small">Best Property Management Platform </p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12 my-4 text-center">
+                    <p class="pb-4">
+                        <span class="sphere-bg p-4 bi bi-heart-fill fs-2"></span>
+                    </p>
+                    <h5 class="text-light mt-4">2X</h5>
+                    <p class="text-light fw-semibold small">Best Rentals Choice Platform</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-12 my-4 text-center">
+                    <p class="pb-4">
+                        <span class="sphere-bg p-4 bi bi-lightbulb-fill fs-2"></span>
+                    </p>
+                    <h5 class="text-light mt-4">5X</h5>
+                    <p class="text-light fw-semibold small">Best Ideal Platform</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore by Location -->
+    <section class="container my-5">
+        <p class="fs-3 text-center mb-4 fw-semibold pt-5">Explore by Location</p>
+        <p class="text-center fw-semibold text-secondary lh-1">OUR MISSION IS TO EMPOWER CONSUMERS WITH INFORMATION TO
+            MAKE SMART DECISIONS.</p>
+
+        <div class="row jusify-content-center mt-5">
+            <div class="col-lg-4 col-md-6 col-12 my-3">
+                <div class="locations shadow rounded">
+                    <img src="img/city/Adiss.jpg" alt="" class="img-city rounded">
+                    <div class="property-info fw-semibold text-center py-5">
+                        <p class="text-danger"> Addis Abeba, Ethiopia</p>
+                        <p class="small">
+                            <span class="small border-end pe-2">12 Villas</span>
+                            <span class="small border-end px-2">12 Buildings</span>
+                            <span class="small border-end px-2">12 Apartments</span>
+                            <span class="small ps-2">12 Condominiums</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-4 col-md-6 col-12 my-3">
+                <div class="locations shadow rounded">
+                    <img src="img/city/Hawasa.jpg" alt="" class="img-city rounded">
+                    <div class="property-info fw-semibold text-center py-5">
+                        <p class="text-danger"> Hawasa, Sidama Ethiopia</p>
+                        <p class="small">
+                            <span class="small border-end pe-2">12 Villas</span>
+                            <span class="small border-end px-2">12 Buildings</span>
+                            <span class="small border-end px-2">12 Apartments</span>
+                            <span class="small ps-2">12 Condominiums</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 my-3">
+                <div class="locations shadow rounded">
+                    <img src="img/city/Bahirdar.png" alt="" class="img-city rounded">
+                    <div class="property-info fw-semibold text-center py-5">
+                        <p class="text-danger"> Bahirdar, Amhara Ethiopia</p>
+                        <p class="small">
+                            <span class="small border-end pe-2">12 Villas</span>
+                            <span class="small border-end px-2">12 Buildings</span>
+                            <span class="small border-end px-2">12 Apartments</span>
+                            <span class="small ps-2">12 Condominiums</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 my-3">
+                <div class="locations shadow rounded">
+                    <img src="img/city/Mekele.jpg" alt="" class="img-city rounded">
+                    <div class="property-info fw-semibold text-center py-5">
+                        <p class="text-danger"> Mekele, Tigray Ethiopia</p>
+                        <p class="small">
+                            <span class="small border-end pe-2">12 Villas</span>
+                            <span class="small border-end px-2">12 Buildings</span>
+                            <span class="small border-end px-2">12 Apartments</span>
+                            <span class="small ps-2">12 Condominiums</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 my-3">
+                <div class="locations shadow rounded">
+                    <img src="img/city/Semera.jpg" alt="" class="img-city rounded">
+                    <div class="property-info fw-semibold text-center py-5">
+                        <p class="text-danger"> Semera, Afar Ethiopia</p>
+                        <p class="small">
+                            <span class="small border-end pe-2">12 Villas</span>
+                            <span class="small border-end px-2">12 Buildings</span>
+                            <span class="small border-end px-2">12 Apartments</span>
+                            <span class="small ps-2">12 Condominiums</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 my-3">
+                <div class="locations shadow rounded">
+                    <img src="img/city/Gondar.jpg" alt="" class="img-city rounded">
+                    <div class="property-info fw-semibold text-center py-5">
+                        <p class="text-danger"> Gondar, Amhara Ethiopia</p>
+                        <p class="small">
+                            <span class="small border-end pe-2">12 Villas</span>
+                            <span class="small border-end px-2">12 Buildings</span>
+                            <span class="small border-end px-2">12 Apartments</span>
+                            <span class="small ps-2">12 Condominiums</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Featured Maintenance Staff -->
+    <section class="bg1 mt-5">
+        <div class="container py-5">
+            <p class="fs-3 text-center mb-4 fw-semibold pt-5">Our Featured Maintenance Staff</p>
+            <p class="text-center fw-semibold text-secondary lh-1">OUR MAINTENANCE STAFF ARE LICENSED PROFESSIONALS THAT
+                SPECIALISE
+                IN FIXING.</p>
+            <div class="row swiper swipers small fw-semibold py-5">
+                <div class="swiper-wrapper">
+                    <div class="bg agent-wrapper swiper-slide p-5 text-center shadow-lg rounded">
+                        <p class="fs-1 bi bi-person-fill text-center"></p>
+                        <p class="bi bi-geo-alt-fill text-secondary mt-4">Gondar, Ethiopia</p>
+                        <p class="text-danger fs-5 ">
+                            Jon Doe
+                        </p>
+                    </div>
+
+                    <div class="bg agent-wrapper swiper-slide p-5 text-center shadow-lg rounded">
+                        <p class="fs-1 bi bi-person-fill text-center"></p>
+                        <p class="bi bi-geo-alt-fill text-secondary mt-4">Gondar, Ethiopia</p>
+                        <p class="text-danger fs-5 ">
+                            Jon Doe
+                        </p>
+                    </div>
+
+                    <div class="bg agent-wrapper swiper-slide p-5 text-center shadow-lg rounded">
+                        <p class="fs-1 bi bi-person-fill text-center"></p>
+                        <p class="bi bi-geo-alt-fill text-secondary mt-4">Gondar, Ethiopia</p>
+                        <p class="text-danger fs-5 ">
+                            Jon Doe
+                        </p>
+                    </div>
+
+                    <div class="bg agent-wrapper swiper-slide p-5 text-center shadow-lg rounded">
+                        <p class="fs-1 bi bi-person-fill text-center"></p>
+                        <p class="bi bi-geo-alt-fill text-secondary mt-4">Gondar, Ethiopia</p>
+                        <p class="text-danger fs-5 ">
+                            Jon Doe
+                        </p>
+                    </div>
+
+                    <div class="bg agent-wrapper swiper-slide p-5 text-center shadow-lg rounded">
+                        <p class="fs-1 bi bi-person-fill text-center"></p>
+                        <p class="bi bi-geo-alt-fill text-secondary mt-4">Gondar, Ethiopia</p>
+                        <p class="text-danger fs-5 ">
+                            Jon Doe
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Slide pagination button -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section class="bg-danger py-2">
+        <div class="container">
+            <div class="row pt-3">
+                <div class="col-lg-8 col-md-7 col-12 text-light small">
+                    <p class="fs-1 lh-1 fw-semibold">Do you Have Questions?</p>
+                    <p class="lh-1 small fw-semibold">We'll help you to live a comfortable life!</p>
+                </div>
+                <div class="col-lg-3 col-md-5 col-12 offset-lg-1 my-3">
+                    <a href="contact.html" class="btns px-5 bg-light text-dark">Contact Us Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-lg-4 col-md-6 col-12 my-3 small fw-semibold">
+                    <img src="img/logo.png" alt="" width="200px">
+                    <p class="lh-1 mt-4">Do you Need Help with Anything?</p>
+                    <p class="lh-1 text-secondary">Receive updates</p>
+                    <form action="#" method="#" class="small fw-semibold">
+                        <input type="email" name="email" class="form-control mt-4" placeholder="Email Address">
+                        <button class="btns mt-4 px-5 mb-4">Subscribe</button>
+                    </form>
+                </div>
+
+                <div class="offset-lg-2 col-lg-3 col-6 my-5">
+                    <p class="mb-4 fw-semibold">PROPERTIES</p>
+                    <p><a class="fw-semibold" href="apartments.html">Apartments</a></p>
+                    <p><a class="fw-semibold" href="condominium.html">Condominium</a></p>
+                    <p><a class="fw-semibold" href="building.html">Buildings</a></p>
+                    <p><a class="fw-semibold" href="villa.html">Villa</a></p>
+                </div>
+
+                <div class="col-lg-3 col-6 my-5">
+                    <p class="mb-4 fw-semibold">SUPPORT</p>
+                    <p><a class="fw-semibold" href="about.html">About</a></p>
+                    <p><a class="fw-semibold" href="contact.html">Contact</a></p>
+                    <p><a class="fw-semibold" href="#">Privacy</a></p>
+                    <p><a class="fw-semibold" href="#">Terms</a></p>
+                </div>
+
+                <hr>
+                <p class="small fw-semibold text-center pb-2">Copyright © 2023 Rent It All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jar.amd.min.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src=" /js/swiper-bundle.min.js">
+    </script>
+    <script src="js/swiper.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
