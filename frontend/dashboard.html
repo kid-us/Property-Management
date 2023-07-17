@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <!-- website Icon -->
     <link rel="website icon" href="Img/logo.png">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Dashboard</title>
 </head>
 
@@ -25,13 +25,13 @@
         <!-- Large Device navbar -->
         <div class="container d-none d-md-block">
             <div class="float-start pt-3">
-                <a class="navbar-brand" href="index.html">
-                    <img src="img/logo.png" alt="logo" width="100px">
+                <a class="navbar-brand" href="/index.html">
+                    <img src="/img/logo.png" alt="logo" width="100px">
                 </a>
             </div>
 
             <div class="float-end small fw-semibold pt-4 me-5">
-                <a href="profile.html" class="bi bi-person-lines-fill"> Profile</a>
+                <a href="/profile.html" class="bi bi-person-lines-fill"> Profile</a>
                 <a href="#" class="bi bi-box-arrow-in-right mx-5 text-danger"> Logout</a>
             </div>
         </div>
@@ -39,8 +39,8 @@
         <!-- Small device navbar -->
         <div class="d-block d-md-none">
             <div class="float-start pt-3">
-                <a class="navbar-brand" href="index.html">
-                    <img src="img/logo.png" alt="logo" width="80px">
+                <a class="navbar-brand" href="/index.html">
+                    <img src="/img/logo.png" alt="logo" width="80px">
                 </a>
             </div>
 
@@ -54,13 +54,13 @@
                     <span id="close-menu" class="nav-item text-danger fs-1 float-end cursor me-5 p-4">&times;</span>
 
                     <ul class="px-5 fw-semibold">
-                        <a href="index.html">
-                            <img src="img/logo.png" alt="logo" width="120px" class="py-4">
+                        <a href="/index.html">
+                            <img src="/img/logo.png" alt="logo" width="120px" class="py-4">
                         </a>
 
-                        <li><a href="dashboard" class="nav-link bi bi-person-fill py-5 fs-2"> Jon Doe</a></li>
+                        <li><a href="/dashboard" class="nav-link bi bi-person-fill py-5 fs-2"> Jon Doe</a></li>
 
-                        <li><a href="profile.html" class="nav-link bi bi-person-lines-fill"> Profile</a></li>
+                        <li><a href="/profile.html" class="nav-link bi bi-person-lines-fill"> Profile</a></li>
                         <li><a href="#" class="nav-link bi bi-box-arrow-right"> Logout</a></li>
 
                         <p class="text-center text-light mt-5">LOREM</p>
@@ -93,7 +93,6 @@
             </div>
 
             <!-- If user has already rented a property -->
-
             <div class="col-lg-6 col-12 my-3">
                 <div class="bg shadow-lg p-4 rounded fw-semibold">
                     <p>
@@ -108,7 +107,7 @@
                         <span class="bi bi-clock text-danger fw-semibold"></span>
                         12 Remaining days for next rent payment
                     </p>
-                    <img src="img/Property/apartment2.jpg" alt="" class="img-property rounded mt-2">
+                    <img src="/img/Property/apartment2.jpg" alt="" class="img-property rounded mt-2">
                     <div class="row">
                         <div class="col-6">
                             <form action="#" method="#">
@@ -117,11 +116,19 @@
                             </form>
                         </div>
                         <div class="col-6">
-                            <p class="maintenance-link cursor mt-5 py-2 text-center rounded text-danger bg-warning"
-                                data-num="1">
+                            <p class="maintenance-link cursor mt-5 py-2 text-center rounded bg-warning " data-num="1">
                                 Maintenance
                                 Needed ?
                             </p>
+                            <p class="mt-2 pt-2" data-num="2">Maintenance Status
+                            </p>
+                            <form action="#" method="#">
+                                <input type="text" number hidden>
+                                <button name="fixed" class="btn btn-primary py-1 w-50 mb-2">Not Requested</button>
+                                <button name="fixed" class="btn btn-info py-1 w-25 mb-2">New</button>
+                                <button name="fixed" class="btn btn-warning py-1 w-50">Pending</button>
+                                <button name="not-fixed" class="btn btn-success py-1 w-25">Fixed</button>
+                            </form>
                         </div>
                     </div>
 
@@ -150,7 +157,7 @@
                         <span class="bi bi-clock text-danger fw-semibold"></span>
                         12 Remaining days for next rent payment
                     </p>
-                    <img src="img/Property/buliding1.jpg" alt="" class="img-property rounded mt-2">
+                    <img src="/img/Property/buliding1.jpg" alt="" class="img-property rounded mt-2">
                     <div class="row">
                         <div class="col-6">
                             <form action="#" method="#">
@@ -159,10 +166,19 @@
                             </form>
                         </div>
                         <div class="col-6">
-                            <p class="maintenance-link cursor mt-5 py-2 text-center rounded text-danger bg-warning"
-                                data-num="2">Maintenance
+                            <p class="maintenance-link cursor mt-5 py-2 text-center rounded bg-warning" data-num="2">
+                                Maintenance
                                 Needed ?
                             </p>
+                            <p class="mt-2 pt-2" data-num="2">Maintenance Status
+                            </p>
+                            <form action="#" method="#">
+                                <input type="text" number hidden>
+                                <button name="fixed" class="btn btn-primary py-1 w-50 mb-2">Not Requested</button>
+                                <button name="fixed" class="btn btn-info py-1 w-25 mb-2">New</button>
+                                <button name="fixed" class="btn btn-warning py-1 w-50">Pending</button>
+                                <button name="not-fixed" class="btn btn-success py-1 w-25">Fixed</button>
+                            </form>
                         </div>
                     </div>
 
@@ -177,79 +193,6 @@
                 </div>
             </div>
 
-            <div class="col-lg-6 col-12 my-3">
-                <div class="bg shadow-lg p-4 rounded fw-semibold">
-                    <p>
-                        <span class="bi bi-building text-danger"></span>
-                        Building
-                    </p>
-                    <p>
-                        <span class="bi bi-geo-alt-fill text-danger"> </span>
-                        Addis Abeba, Ethiopia
-                    </p>
-                    <p class="small">
-                        <span class="bi bi-clock text-danger fw-semibold"></span>
-                        12 Remaining days for next rent payment
-                    </p>
-                    <img src="img/Property/buliding1.jpg" alt="" class="img-property rounded mt-2">
-                    <div class="row">
-                        <div class="col-6">
-                            <form action="#" method="#">
-                                <input type="number" value="2123" hidden>
-                                <button class="btns w-100 mt-5">Move Out</button>
-                            </form>
-                        </div>
-                        <div class="col-6">
-                            <p class="maintenance-link mt-5 pt-2 text-center" data-num="2">Maintenance Status
-                            </p>
-                            <p class="small"> Status: No action Taken</p>
-                            <form action="#" method="#">
-                                <label for="">Is it</label>
-                                <input type="text" number hidden>
-                                <button name="fixed" class="btn btn-success py-0 px-4">Fixed</button> or
-                                <button name="not-fixed" class="btn btn-warning py-0 px-3">Not-Fixed</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-12 my-3">
-                <div class="bg shadow-lg p-4 rounded fw-semibold">
-                    <p>
-                        <span class="bi bi-building text-danger"></span>
-                        Building
-                    </p>
-                    <p>
-                        <span class="bi bi-geo-alt-fill text-danger"> </span>
-                        Addis Abeba, Ethiopia
-                    </p>
-                    <p class="small">
-                        <span class="bi bi-clock text-danger fw-semibold"></span>
-                        12 Remaining days for next rent payment
-                    </p>
-                    <img src="img/Property/buliding1.jpg" alt="" class="img-property rounded mt-2">
-                    <div class="row">
-                        <div class="col-6">
-                            <form action="#" method="#">
-                                <input type="number" value="2123" hidden>
-                                <button class="btns w-100 mt-5">Move Out</button>
-                            </form>
-                        </div>
-                        <div class="col-6">
-                            <p class="maintenance-link mt-5 pt-2 text-center" data-num="2">Maintenance Status
-                            </p>
-                            <p class="small"> Status: On our way</p>
-                            <form action="#" method="#">
-                                <label for="">Is it</label>
-                                <input type="text" number hidden>
-                                <button name="fixed" class="btn btn-success py-0 px-4">Fixed</button> or
-                                <button name="not-fixed" class="btn btn-warning py-0 px-3">Not-Fixed</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -258,7 +201,7 @@
         <div class="container">
             <div class="row pt-5">
                 <div class="col-lg-4 col-md-6 col-12 my-3 small fw-semibold">
-                    <img src="img/logo.png" alt="" width="200px">
+                    <img src="/img/logo.png" alt="" width="200px">
                     <p class="lh-1 mt-4">Do you Need Help with Anything?</p>
                     <p class="lh-1 text-secondary">Receive updates</p>
                     <form action="#" method="#" class="small fw-semibold">
@@ -269,16 +212,16 @@
 
                 <div class="offset-lg-2 col-lg-3 col-6 my-5">
                     <p class="mb-4 fw-semibold">PROPERTIES</p>
-                    <p><a class="fw-semibold" href="apartments.html">Apartments</a></p>
-                    <p><a class="fw-semibold" href="condominium.html">Condominium</a></p>
-                    <p><a class="fw-semibold" href="building.html">Buildings</a></p>
-                    <p><a class="fw-semibold" href="villa.html">Villa</a></p>
+                    <p><a class="fw-semibold" href="/apartments.html">Apartments</a></p>
+                    <p><a class="fw-semibold" href="/condominium.html">Condominium</a></p>
+                    <p><a class="fw-semibold" href="/building.html">Buildings</a></p>
+                    <p><a class="fw-semibold" href="/villa.html">Villa</a></p>
                 </div>
 
                 <div class="col-lg-3 col-6 my-5">
                     <p class="mb-4 fw-semibold">SUPPORT</p>
-                    <p><a class="fw-semibold" href="about.html">About</a></p>
-                    <p><a class="fw-semibold" href="contact.html">Contact</a></p>
+                    <p><a class="fw-semibold" href="/about.html">About</a></p>
+                    <p><a class="fw-semibold" href="/contact.html">Contact</a></p>
                     <p><a class="fw-semibold" href="#">Privacy</a></p>
                     <p><a class="fw-semibold" href="#">Terms</a></p>
                 </div>
@@ -289,7 +232,7 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
